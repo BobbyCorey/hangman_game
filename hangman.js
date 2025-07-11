@@ -47,7 +47,6 @@ function setSecretWord() {
     wrongGuesses = [];
     wordInputSection.style.display = "none"; // Hide word input after the word is set
     message.textContent = "";
-
     roundCount++;
 
     // Update word display after the word is set
