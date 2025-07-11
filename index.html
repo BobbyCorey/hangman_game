@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        #word-display {
+            font-size: 2em;
+            letter-spacing: 10px;
+            margin: 20px 0;
+        }
+
+        #keyboard button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #wrong-letters {
+            margin-top: 10px;
+            color: red;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        canvas {
+            border: 1px solid #333;
+            margin: 20px auto;
+            display: block;
+            background-color: #fff;
+        }
+
+        #word-input, #name-input {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hangman</h1>
+
+    <div id="name-input">
+        <p>Enter Player 1 Name:</p>
+        <input type="text" id="player1-name" />
+        <p>Enter Player 2 Name:</p>
+        <input type="text" id="player2-name" />
+    </div>
+
+    <div id="word-input">
+        <p>Player 1, enter a word:</p>
+        <input type="password" id="secret-word" />
+        <button onclick="setSecretWord()">Start Game</button>
+    </div>
+
+    <canvas id="hangmanCanvas" width="200" height="250"></canvas>
+    <div id="word-display"></div>
+    <div id="keyboard"></div>
+    <div id="wrong-letters">Wrong guesses: </div>
+    <div id="message"></div>
+    <div>
+        <button id="play-again" style="display: none; margin-top: 20px;" onclick="resetGame()">Play Again</button>
+    </div>
+
+    <script src="hangman.js"></script>
+</body>
+</html>
